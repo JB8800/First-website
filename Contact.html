@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bean & Brew</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+	<div class="header-logo">
+		<img src="images/Bean&Brewlogo.png" class="header-img" alt="logo">
+	</div>
+
+	<nav>
+		<div class="navbar">
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<a href="menu.html">Menu</a>
+			<a href="booking.html">Booking</a>
+			<a href="contact.html">Contact</a>
+
+		</div>
+	</nav>
+	<div class="flex-container-contact-address">
+		<h3>Address:</h3>
+		<p>21, High street</p>
+		<p>Paisley Road</p>
+		<p>PA1 3ES</p>
+
+	</div>
+	<div class="flex-container-contact-information">
+		<h3>E-mail:</h3>
+		<p>Bean&Brew@outlook.co.uk</p>
+		<h3>Phone:</h3>
+		<p>555-290158</p>
+	</div>
+	<form id="contactForm" class="contactForm">
+		<div class="form-group">
+			<label for="contactName" class="label">Name: </label>
+			<input type="text" id="contactName" class="input" >
+			<div id="contactNameError" class="error"></div>
+		</div>
+
+		<div class="form-group">
+			<label for="contactEmail" class="label">E-mail: </label>
+			<input type="text" id="contactEmail" class="input" >
+			<div id="contactEmailError" class="error"></div>
+		</div>
+
+		<button type="submit" class="button">Submit</button>
+		<div id="contactFormMessage"></div>
+	</form>
+
+	<script>
+		const form = document.getElementById('contactForm');
+		const message = document.getElementById('contactFormMessage');
+
+		form.addEventListener('submit', function (e) {
+			e.preventDefault();
+			let valid = true;
+
+			// Clear previous errors
+			document.querySelectorAll('.error').forEach(el => el.textContent = '');
+			message.textContent = '';
+			message.className = '';
+
+			// Get values
+			const name = document.getElementById('contactName').value.trim();
+			const email = document.getElementById('contactEmail').value.trim();
+
+			// Validate Name
+			if (!name) {
+				document.getElementById('contactNameError').textContent = 'Name is required.';
+				valid = false;
+			}
+
+			// Validate Email
+			if (!email) {
+				document.getElementById('contactEmailError').textContent = 'E-mail is required.';
+				valid = false;
+			} else if (!/^\S+@\S+\.\S+$/.test(email)) {
+				document.getElementById('contactEmailError').textContent = 'Enter a valid e-mail address.';
+				valid = false;
+			}
+
+			// If all valid
+			if (valid) {
+				message.textContent = 'Contact successfully submitted!';
+				message.className = 'success';
+				form.reset();
+			}
+		});
+	</script>
+
+	<div class="site-footer">
+		<nav>
+			<p>© 2025 Bean & Brew</p>
+			<p>All rights reserved</p>
+			<a href="index.html">Home</a> |
+			<a href="about.html">About</a> |
+			<a href="menu.html">Menu</a> |
+			<a href="booking.html">Booking</a> |
+			<a href="contact.html">Contact</a>
+		</nav>
+		<p>Open: Mon-Fri 8am-6pm | Sat-Sun 9am-5pm</p>
+		<p>Privacy Policy | Terms & Conditions</p>
+	</div>
+
+</body>
+
+
+
+
+
+</html>
