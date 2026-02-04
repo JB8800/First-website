@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bean & Brew</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+	<div class="header-logo">
+		<img src="images/Bean&Brewlogo.png" class="header-img" alt="logo">
+	</div>
+
+	<nav>
+		<div class="navbar">
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<a href="menu.html">Menu</a>
+			<a href="booking.html">Booking</a>
+			<a href="contact.html">Contact</a>
+
+		</div>
+	</nav>
+	<div class="flex-container-booking-information">
+		<h3>Book a table</h3>
+		<p>Opening times:</p>
+		<p>Monday - Friday 8am - 6pm</p>
+		<p>Saturday - Sunday 9 am - 5pm</p>
+
+	</div>
+	<form id="bookingForm" class="form">
+		<div class="form-group">
+			<label for="name" class="label">Name: </label>
+			<input type="text" id="name" class="input" >
+			<div id="nameError" class="error"></div>
+		</div>
+
+		<div class="form-group">
+			<label for="email" class="label">E-mail: </label>
+			<input type="text" id="email" class="input" >
+			<div id="emailError" class="error"></div>
+		</div>
+
+		<div class="form-group">
+			<label for="date" class="label">Booking Date: </label>
+			<input type="date" id="date" class="input" >
+			<div id="dateError" class="error"></div>
+		</div>
+
+		<button type="submit" class="button">Submit</button>
+		<div id="formMessage"></div>
+	</form>
+
+	<script>
+		const form = document.getElementById('bookingForm');
+		const message = document.getElementById('formMessage');
+
+		form.addEventListener('submit', function (e) {
+			e.preventDefault();
+			let valid = true;
+
+			// Clear previous errors
+			document.querySelectorAll('.error').forEach(el => el.textContent = '');
+			message.textContent = '';
+			message.className = '';
+
+			// Get values
+			const name = document.getElementById('name').value.trim();
+			const email = document.getElementById('email').value.trim();
+			const date = document.getElementById('date').value.trim();
+
+			// Validate input
+			if (!name) {
+				document.getElementById('nameError').textContent = 'Name is required.';
+				valid = false;
+
+			}
+
+
+			if (!email) {
+				document.getElementById('emailError').textContent = 'E-mail is required.';
+				valid = false;
+			} else if (!/^\S+@\S+\.\S+$/.test(email)) {
+				document.getElementById('emailError').textContent = 'Enter a valid e-mail address.';
+				valid = false;
+			}
+
+			// Validate Date
+			if (!date) {
+				document.getElementById('dateError').textContent = 'Booking date is required.';
+				valid = false;
+			} else {
+				const today = new Date();
+				const bookingDate = new Date(date);
+				if (bookingDate < today.setHours(0, 0, 0, 0)) {
+					document.getElementById('dateError').textContent = 'Booking date cannot be in the past.';
+					valid = false;
+				}
+			}
+
+			// If all valid
+			if (valid) {
+				message.textContent = 'Booking successfully submitted!';
+				message.className = 'success';
+				form.reset(); // optional: clear form after submit
+			}
+		});
+	</script>
+	<div class="site-footer">
+		<nav>
+			<p>© 2025 Bean & Brew</p>
+			<p>All rights reserved</p>
+			<a href="index.html">Home</a> |
+			<a href="about.html">About</a> |
+			<a href="menu.html">Menu</a> |
+			<a href="booking.html">Booking</a> |
+			<a href="contact.html">Contact</a>
+		</nav>
+		<p>Open: Mon-Fri 8am-6pm | Sat-Sun 9am-5pm</p>
+		<p>Privacy Policy | Terms & Conditions</p>
+	</div>
+
+</body>
+
+
+
+
+
+</html>
