@@ -1,0 +1,1080 @@
+/* -----------	width: 80%;
+				max-width: 1024px;
+				keeps width, doesnt allow items to go larger when maximised
+				width: 20vw; viewport, logo is smaller than other items.
+				-------- */
+
+@media (max-width: 1024px) {
+	.menu {
+		display: none;
+	}
+}
+
+
+
+body {
+	font-family: 'Arial', sans-serif;
+}
+
+/*--------- keeps scroll on at all times to keep all pages the same--------*/
+body {
+	min-height: 100vh;
+	overflow-y: scroll;
+	margin: 0;
+	padding: 0;
+}
+
+/*------------------- keyboard navigation, dark orange for high contrast------*/
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+	outline: 2px solid rgb(255, 140, 0);
+	outline-offset: 2px;
+}
+
+/* ---------------------------------logo-------------------------------- */
+
+.header-img {
+	width: 20vw;
+	height: auto;
+	margin-top: -12px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ---------------------------------nav-bar-------------------------------- */
+
+.navbar {
+
+	width: 80%;
+	max-width: 1024px;
+
+	margin: 0px auto;
+	background-color: rgba(40, 71, 83);
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.navbar a {
+	color: rgba(251, 206, 116);
+	text-decoration: none;
+	font-size: 18px;
+	/* padding: 5px 10px; */
+	display: inline-block;
+	/* margin: 0 50px; */
+}
+
+.navbar a:hover {
+	background-color: rgb(34, 88, 109);
+
+	color: rgb(251, 206, 116);
+
+}
+
+.navbar a:active {
+	background-color: rgb(45, 125, 156);
+	color: rgb(251, 206, 116);
+}
+
+/* --------------------------------center-img------------------------------------- */
+.center-img {
+	text-align: center;
+	margin-top: 10;
+}
+
+.center-img img {
+	width: 80%;
+	max-width: 1024px;
+	height: auto;
+	align-items: center;
+}
+
+/* --------------------------------box-intro---------------------------------- */
+
+.box-intro {
+	background-color: rgb(236, 206, 145);
+	padding: 10px 0px;
+	text-align: center;
+	color: rgb(40, 71, 83);
+	/* height: 100px; */
+	width: 80%;
+	max-width: 1024px;
+	/* min-width: 800px; */
+
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+
+
+}
+
+.box-intro h3 {
+	margin: 0;
+	margin-bottom: 5px;
+	/* min-width: 800px; */
+
+}
+
+.box-intro p {
+	margin: 0px 0;
+	/* min-width: 800px; */
+
+}
+
+/* ------------------------------------flex-container Awards-------------------------------- */
+.flex-container {
+	background-color: rgb(40, 71, 83);
+	/* height: 100px; */
+	width: 80%;
+	max-width: 1024px;
+	/* min-width: 800px; */
+	padding: 0px 0px;
+
+	color: rgb(251, 206, 116);
+
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+
+	display: flex;
+	/* flex-direction: row; */
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+
+
+
+}
+
+/*------------------------ ribbon image -----------------------*/
+.flex-item-1 {
+	flex: 0 0 auto;
+	padding: 10px
+}
+
+.flex-item-1 img {
+
+	max-height: 80px;
+	height: auto;
+	width: auto;
+	margin-left: 10px;
+}
+
+/*-------------------------------- trophy image-----------------------------*/
+.flex-item-2 {
+	flex: 0 0 auto;
+	padding: 10px
+}
+
+
+.flex-item-2 img {
+	max-height: 80px;
+	height: auto;
+	width: auto;
+	margin-left: 10px;
+}
+
+/*-------------------------------- Food hygeine rating image----------------*/
+.flex-item-3 {
+	flex: 0 0 auto;
+	padding: 10px
+}
+
+.flex-item-3 img {
+
+	max-height: 80px;
+	height: auto;
+	width: auto;
+	margin-right: 10px;
+}
+
+/*--------------------------------------- Awards text ----------------------------*/
+.flex-item-text {
+	flex: 1;
+	/* margin-left: 60px; */
+	margin-bottom: 30px;
+	margin-top: 10px;
+	text-align: center;
+	/* overflow: hidden; */
+	min-width: 250px;
+}
+
+/*------ h3 header text ------*/
+.flex-item-text h3 {
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+/*------ p paragraph text------*/
+.flex-item-text p {
+	margin: 0px 0;
+}
+
+/*------------------ container 2 social media, address, contact details -----------*/
+.flex-container-2 {
+	background-color: rgb(40, 71, 83);
+	height: 100px;
+	width: 80%;
+	max-width: 1024px;
+	padding: 0px 0px;
+	color: rgb(251, 206, 116);
+
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	overflow: hidden;
+
+}
+
+/* ------------------------------------ social media images ------------------------*/
+/* ------ facebook image ------*/
+.flex-item-1-1.facebook {
+	flex: 0 0 auto;
+	padding: 10px
+}
+
+.flex-item-1-1.facebook img {
+
+	max-height: 80px;
+	height: auto;
+	width: auto;
+	margin-left: 10px;
+
+}
+
+/* ------ instagram image ------*/
+.flex-item-1-1.instagram {
+	flex: 0 0 auto;
+	padding: 10px
+}
+
+.flex-item-1-1.instagram img {
+	max-height: 80px;
+	height: auto;
+	width: auto;
+	margin-left: 10px;
+}
+
+/* ------ tiktok image ------*/
+.flex-item-1-1.tiktok {
+	flex: 0 0 auto;
+	padding: 10px
+}
+
+.flex-item-1-1.tiktok img {
+	max-height: 80px;
+	height: auto;
+	width: auto;
+	margin-left: 10px;
+}
+
+
+/*-------- We are located at: ---------*/
+.flex-item-2-2 {
+	flex: 1;
+	margin-left: -40px;
+	margin-top: 10px;
+	min-width: 250px;
+	text-align: center;
+
+}
+
+.flex-item-2-2 h3 {
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+.flex-item-2-2 p {
+	margin: 0px 0;
+
+}
+
+/*---------- Contact Details--------*/
+.flex-item-3-3 {
+	margin-right: 10px;
+	margin-top: 10px;
+	min-width: 275px;
+	text-align: center;
+
+}
+
+.flex-item-3-3 h3 {
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+.flex-item-3-3 p {
+	margin: 0px 0;
+	margin-right: 10px;
+}
+
+/*-------------------------------- footer --------------------*/
+.site-footer {
+	background-color: rgb(40, 71, 83);
+	color: rgb(251, 206, 116);
+
+	text-align: center;
+	padding: 15px 10px;
+	font-size: 14px;
+	margin-top: 5px;
+	height: 130px;
+	width: 80%;
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.site-footer nav a {
+	color: rgb(251, 206, 116);
+	text-decoration: none;
+	margin: 0 5px;
+}
+
+.site-footer nav a:hover {
+	text-decoration: underline;
+}
+
+.site-footer p {
+	margin: 5px 0;
+}
+
+
+
+/*-------------------------------- Contact page ------------------------------------*/
+
+/*---------------- Address --------------------*/
+.flex-container-contact-address {
+	background-color: rgb(236, 206, 145);
+	height: 100px;
+	width: 40%;
+	max-width: 600px;
+	padding: 10px 0px;
+	text-align: center;
+	color: rgb(29, 68, 82);
+
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+
+
+}
+
+.flex-container-contact-address h3 {
+	margin: 0px 0;
+}
+
+
+
+.flex-container-contact-address p {
+	margin: 0px 0;
+
+}
+
+
+
+/*-------------------------- Contact Information ------------------------------------*/
+.flex-container-contact-information {
+	background-color: rgb(236, 206, 145);
+	height: 100px;
+	width: 40%;
+	max-width: 600px;
+	padding: 10px 0px;
+	text-align: center;
+	color: rgb(29, 68, 82);
+
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flex-container-contact-information h3 {
+	margin: 0px 0;
+}
+
+.flex-container-contact-information p {
+	margin: 0px 0;
+}
+
+/*-------------------------------- contact form -----------------*/
+.contactForm {
+	/* border-width: 01px;
+	border-color: black;
+	border-style: solid; */
+	background-color: rgb(236, 206, 145);
+	padding: 10px 25px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
+	width: 40%;
+	max-width: 600px;
+	align-items: center;
+	line-height: 2;
+	word-spacing: 2px;
+	letter-spacing: 0px;
+	text-indent: 1px;
+}
+
+.contactForm button {
+	margin-left: 187px;
+	margin-top: 25px;
+	font-family: inherit;
+	font-size: 14px;
+	/* comfortable text size */
+	padding: 5px 10px;
+	/* makes button bigger & softer */
+	background-color: #f2f2f2;
+	color: #000;
+	border: 1px solid #949292;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.contactForm button:hover {
+	background-color: rgb(208, 212, 212);
+}
+
+.contactForm button:active {
+	background-color: rgb(151, 151, 151);
+	transform: scale(0.98);
+}
+
+.contactForm label {
+	display: inline-block;
+	margin: 2.5px 25px;
+	width: 130px;
+	text-align: left;
+	font-size: 18px;
+	color: rgb(29, 68, 82);
+}
+
+.contactForm input {
+	height: 25px;
+	font-size: 16px;
+	padding: 5px 10px;
+	font-family: inherit;
+	border-radius: 4px;
+	background-color: #f2f2f2;
+	color: #000;
+	border: 1px solid #949292;
+}
+
+.contactForm .form-group {
+	position: relative;
+}
+
+.contactForm .error {
+	color: red;
+	font-size: 14px;
+	min-height: 18px;
+	margin-top: 5px;
+	margin-left: 188px;
+
+}
+
+
+
+
+
+/*--------------------------------Booking------------------------------------------*/
+.flex-container-booking-information {
+	background-color: rgb(236, 206, 145);
+	height: 100px;
+	width: 40%;
+	max-width: 600px;
+	padding: 10px 0px;
+	text-align: center;
+	color: rgb(29, 68, 82);
+
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flex-container-booking-information h3 {
+	margin: 0px 0;
+}
+
+.flex-container-booking-information p {
+	margin: 0px 0;
+}
+
+/*----------------------- booking form-----------------------*/
+.form {
+	background-color: rgb(236, 206, 145);
+	padding: 10px 25px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
+	width: 40%;
+	max-width: 600px;
+	align-items: center;
+	line-height: 2;
+	word-spacing: 2px;
+	letter-spacing: 0px;
+	text-indent: 1px;
+
+
+}
+
+
+
+
+.button {
+	margin-left: 187px;
+	margin-top: 25px;
+	font-family: inherit;
+	margin-left: 187px;
+	font-size: 14px;
+	padding: 5px 10px;
+
+	background-color: #f2f2f2;
+	color: #000;
+	border: 1px solid #949292;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.Button:hover {
+	background-color: rgb(208, 212, 212);
+
+}
+
+.button:active {
+	background-color: rgb(151, 151, 151);
+	transform: scale(0.98);
+}
+
+.label {
+	display: inline-block;
+	margin: 2.5px 25px;
+	width: 130px;
+	text-align: left;
+	font-size: 18px;
+	color: rgb(29, 68, 82);
+
+}
+
+.input {
+	height: 25px;
+	font-size: 16px;
+	padding: 5px 10px;
+	font-family: inherit;
+	border-radius: 4px;
+	background-color: #f2f2f2;
+	color: #000;
+	border: 1px solid #949292;
+}
+
+.form-group {
+	position: relative;
+}
+
+.error {
+	color: red;
+	font-size: 14px;
+	min-height: 18px;
+	margin-top: 5px;
+	margin-left: 188px;
+}
+
+/*------------------------------------ Menu -------------------------------------------*/
+.Flex-container-menu {
+	background-image: url("images/cafemenudark.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	min-height: 600px;
+	height: auto;
+	width: 80%;
+	max-width: 800px;
+	padding: 10px 0px;
+	text-align: center;
+	color: rgb(251, 206, 116);
+
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+
+	overflow: hidden;
+}
+
+.heading-row {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 100px;
+	margin-bottom: 30px;
+}
+
+.heading-row h3 {
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: underline;
+
+}
+
+.heading-row h4 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: underline;
+	font-family: 'georgia', serif;
+}
+
+
+/*-------------------------------- Menu text box --------------------------------*/
+.Flex-container-menu-text {
+	background-color: rgb(236, 206, 145);
+	height: 100px;
+	width: 80%;
+	max-width: 800px;
+	padding: 10px 0px;
+	text-align: center;
+	color: rgb(29, 68, 82);
+
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+
+	overflow: hidden;
+}
+
+.Flex-container-menu-text h3 {
+	text-decoration: underline;
+	margin: -5px 0;
+	min-width: 400px;
+
+
+}
+
+
+.flex-container-menu-text p {
+	margin: 0px 0;
+	min-width: 400px;
+
+}
+
+/*-------------------------------- About ---------------------------------*/
+.Flex-container-about {
+	background-image: url("images/cafemenudark.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	min-height: 600px;
+	height: auto;
+	width: 80%;
+	max-width: 800px;
+	padding: 10px 0px;
+	text-align: center;
+	color: rgb(251, 206, 116);
+
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*------------------------ Slideshow Gallery -------------------------*/
+* {
+	box-sizing: border-box
+}
+
+.slideshow-container {
+
+	max-width: 600px;
+	height: 400px;
+	position: relative;
+	margin: 10px auto 0;
+	overflow: hidden;
+}
+
+.mySlides {
+	display: none;
+}
+
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+	color: rgba(236, 206, 145);
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+	font-size: 40px;
+	font-style: italic;
+	font-weight: bold;
+	font-family: 'georgia', serif;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+
+/* -------------------------Slide gallery 2------------------------------- */
+.slideshow-container-2 {
+
+	max-width: 600px;
+	height: 400px;
+	position: relative;
+	margin: 10px auto 0;
+	overflow: hidden;
+}
+
+.mySlides2 {
+	display: none;
+}
+
+.prev2,
+.next2 {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+.next2 {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev2:hover,
+.next2:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*-------------------------- not using text for this gallery --------------------------*/
+/* 
+.text {
+	color: rgba(236, 206, 145);
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+	font-size: 40px;
+	font-style: italic;
+	font-weight: bold;
+	font-family: 'georgia', serif;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+} */
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot2 {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active,
+.dot2:hover {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade2 {
+	animation-name: fade2;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade2 {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+
+
+
+
+/*---------------------------------------about Coffee Source----------------*/
+.flex-container-about-coffee-source {
+	background-color: rgb(236, 206, 145);
+	height: 100px;
+	width: 100%;
+	max-width: 600px;
+	padding: 10px 0px;
+	text-align: center;
+	color: rgb(29, 68, 82);
+
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flex-container-about-coffee-source h3 {
+	margin: 0px 0;
+}
+
+.flex-container-about-coffee-source p {
+	margin: 0px 0;
+}
+
+/*---------------------------------------about Coffee ethics----------------*/
+
+.flex-container-about-coffee-ethics {
+	background-color: rgb(236, 206, 145);
+	height: 100px;
+	width: 100%;
+	max-width: 600px;
+	padding: 10px 0px;
+	text-align: center;
+	color: rgb(29, 68, 82);
+
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flex-container-about-coffee-ethics h3 {
+	margin: 0px 0;
+}
+
+.flex-container-about-coffee-ethics p {
+	margin: 0px 0;
+}
+
+/*------------------------- Video ----------------------*/
+video {
+	display: block;
+
+	max-width: 600px;
+	width: 60%;
+	height: 400px;
+	margin: 20px auto;
+	border: 0.5px solid #000;
+	border-radius: 8px;
+
+}
+
+.flex-container-about-coffee-pouring {
+	background-color: rgb(236, 206, 145);
+	height: 100px;
+	width: 100%;
+	max-width: 600px;
+	padding: 10px 0px;
+	text-align: center;
+	color: rgb(29, 68, 82);
+
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flex-container-about-coffee-pouring h3 {
+	margin: 0px 0;
+}
+
+.flex-container-about-coffee-pouring p {
+	margin: 0px 0;
+}
+
+
+@media (max-width: 600px) {
+
+	/* Make main containers fit mobile width */
+	.navbar,
+	.center-img img,
+	.box-intro,
+	.flex-container,
+	.flex-container-2,
+	.site-footer,
+	.Flex-container-menu,
+	.Flex-container-menu-text,
+	.Flex-container-about,
+	.flex-container-about-coffee-source,
+	.flex-container-about-coffee-ethics,
+	.flex-container-about-coffee-pouring,
+	.flex-container-booking-information,
+	.flex-container-contact-information,
+	.flex-container-contact-address,
+	.contactForm,
+	.form {
+		width: 95%;
+		max-width: 100%;
+		height: auto;
+		padding: 15px;
+		box-sizing: border-box;
+	}
+
+	/* Stack flex containers vertically */
+	.flex-container,
+	.flex-container-2 {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		flex-wrap: wrap;
+	}
+
+	/* Remove min-width restrictions causing overflow */
+	.flex-item-text,
+	.flex-item-2-2,
+	.flex-item-3-3 {
+		min-width: 0;
+		width: 100%;
+		margin: 0;
+	}
+
+	/* Remove negative margin that breaks mobile */
+	.flex-item-2-2 {
+		margin-left: 0;
+	}
+
+	/* Make award images stay centered */
+	.flex-item-1 img,
+	.flex-item-2 img,
+	.flex-item-3 img {
+		margin: 0;
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* Fix menu heading layout */
+	.heading-row {
+		flex-direction: column;
+		gap: 15px;
+		align-items: center;
+	}
+
+	/* Fix menu text box header and paragraph cutting out */
+	.Flex-container-menu-text h3,
+	.Flex-container-menu-text p {
+		min-width: 0;
+		width: 100%;
+	}
+
+	/* Fix forms layout */
+	.contactForm button,
+	.button {
+		margin: 20px auto 0;
+		display: block;
+	}
+
+	.contactForm label,
+	.label {
+		width: auto;
+		margin: 5px 0;
+		display: block;
+		text-align: left;
+	}
+
+	.contactForm input,
+	.input {
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.contactForm .error,
+	.error {
+		margin-left: 0;
+		text-align: left;
+	}
+}
